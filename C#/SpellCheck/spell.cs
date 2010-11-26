@@ -107,10 +107,7 @@ namespace SpellCheck
             {
                 if(nWords.ContainsKey(s))
                 {
-                    if(nWords.ContainsKey(s))
-                    {
-                        candidates.Add(new wordweightpair(nWords[s], s));
-                    }
+                    candidates.Add(new wordweightpair(nWords[s], s));
                 }
             }
             if (candidates.Count > 0)

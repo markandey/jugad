@@ -44,7 +44,15 @@ namespace SpellCheck
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox2.Text = s.correct(textBox1.Text);
+            string[] sentence = textBox1.Text.Split(new char[] { ' ','\r','\n',',','\t' });
+            string correctedText = "";
+            foreach (string word in sentence)
+            {
+                
+                string corection =s.correct(word);
+                correctedText = correctedText +" "+((corection != "NOT FOUND") ? corection : word);
+            }
+            textBox2.Text = correctedText;
         }
     }
 }

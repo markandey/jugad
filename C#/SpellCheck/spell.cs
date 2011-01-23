@@ -35,6 +35,10 @@ namespace SpellCheck
 	    public spell(String dict)
         {
 		    
+            /*this is contructor,
+             pass dict (a long text of any language (of which you want to build the spell checker)
+             all dictionary will be built from this.
+            */
             int pos=0;
             Regex wordpat = new Regex(@"[a-z]+", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Singleline);
             Match m=null;
